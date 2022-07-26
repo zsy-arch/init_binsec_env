@@ -103,3 +103,5 @@ echo 'Install Sagemath'
 ask 'continue?' || exit
 sudo apt install -y sagemath
 
+echo 'Create vmware sharefile script in ~/vm_sharefile.sh'
+echo 'sudo /usr/bin/vmhgfs-fuse .host:/ /mnt/hgfs -o subtype=vmhgfs-fuse,allow_other' > ~/vm_sharefile.sh
