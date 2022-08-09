@@ -81,7 +81,12 @@ sudo gem install one_gadget
 
 echo 'Install pwndbg'
 ask 'continue?' || exit
-
+# # some more gdb alias
+# alias pwndbg='gdb -q -ex init-pwndbg'
+# to ~/.gdbinit
+# define init-pwndbg
+# source /home/zsy/pwnutils/pwndbg/gdbinit.py
+# end
 result="$(gdb <<< 'quit' | grep 'pwndbg>')"
 if [ -z "$result" ]
 then
